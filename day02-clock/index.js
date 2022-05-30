@@ -21,11 +21,11 @@ function setRotation() {
 
 function displayTime() {
     const now = new Date();
-
+    
+    let AmOrPm = now.getHours() >= 12 ? 'PM' : 'AM';
     const hours = (now.getHours() % 12) || 12;
     const min = now.getMinutes();
     const sec = now.getSeconds() >= 10 ? now.getSeconds() : '0' + now.getSeconds();
-    let AmOrPm = hours >= 12 ? 'PM' : 'AM';
 
     const currTime = hours + ":" + min + ":" + sec + " " + AmOrPm;
     document.getElementById("time").innerHTML = currTime;
