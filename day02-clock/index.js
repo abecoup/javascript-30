@@ -24,7 +24,7 @@ function displayTime() {
     
     let AmOrPm = now.getHours() >= 12 ? 'PM' : 'AM';
     const hours = (now.getHours() % 12) || 12;
-    const min = now.getMinutes();
+    const min = now.getMinutes() >= 10 ? now.getMinutes() : '0' + now.getMinutes();
     const sec = now.getSeconds() >= 10 ? now.getSeconds() : '0' + now.getSeconds();
 
     const currTime = hours + ":" + min + ":" + sec + " " + AmOrPm;
