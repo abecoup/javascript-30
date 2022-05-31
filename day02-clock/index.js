@@ -32,6 +32,4 @@ function displayTime() {
 }
 
 setInterval(setRotation, 10);
-setRotation();
 setInterval(displayTime, 10);
-displayTime();
