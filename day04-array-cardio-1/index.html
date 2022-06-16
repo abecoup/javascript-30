@@ -10,16 +10,11 @@
     
     <!--  HTML  -->
 
-    
-
-
     <!-- STYLES -->
 
     <style>
 
     </style>
-
-
 
     <!-- SCRIPTS -->
 
@@ -108,9 +103,14 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    
-
-
+    let result = data.reduce((obj, currStr) => {
+      if(!obj[currStr]){
+        obj[currStr] = 0;
+      }
+      obj[currStr]++;
+      return obj;
+    }, {});
+    console.log(result);
 
     </script>
 
